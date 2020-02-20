@@ -28,4 +28,14 @@ public class CreditCard {
         return rep.toString();
     }
 
+    public boolean pay(double money) {
+        try {
+            this.credit -= money;
+            return true;
+        } catch (Exception fail) {
+            return false;
+        }
+
+    }
+
 }
