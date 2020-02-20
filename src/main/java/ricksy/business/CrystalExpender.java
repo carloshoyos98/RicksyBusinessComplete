@@ -20,4 +20,9 @@ public class CrystalExpender {
         rep.append("cost: " + this.itemCost);
         return rep.toString();
     }
+
+    public void dispatch(CreditCard client) {
+        this.stock--;
+        client.pay(this.itemCost);
+    }
 }

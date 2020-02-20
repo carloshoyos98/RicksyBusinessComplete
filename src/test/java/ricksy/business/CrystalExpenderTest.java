@@ -13,4 +13,12 @@ public class CrystalExpenderTest {
                       "cost: " + packExtender.itemCost, packExtender.toString());
     }
 
+    @Test
+    public void dispatchTest() {
+        packExtender = new CrystalExpender(20, 50.0);
+        CreditCard Abradolph = new CreditCard("Abradolph", "5369666345223491");
+        packExtender.dispatch(Abradolph);
+        assertEquals(19, packExtender.stock());
+        assertEquals(2950, Abradolph.credit(), 0);
+    }
 }
