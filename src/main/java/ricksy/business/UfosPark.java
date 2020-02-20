@@ -20,7 +20,7 @@ public class UfosPark {
     //Método que comprueba si hay ovnis libres
     /*private int freeUfos() {
         for(String cardNumber : this.flota.keySet()) {
-            if(this.flota.get(freeUfo) == null) {
+            if(this.flota.get(cardNumber) == null) {
                 freeUfo++;
             }
         }

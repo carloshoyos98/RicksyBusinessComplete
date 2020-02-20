@@ -153,5 +153,23 @@ public class RicksyBusiness {
         packExpender.dispatch(gearHead);
         System.out.println("Packs\n" + packExpender);
         System.out.println("Credito de GearHead: " + gearHead.credit());
+
+        /**
+         * Vamos a automatizar ahora ambas tareas, de modo que
+         * cuando llega un invitado/a se le asiga un ovni
+         * y un pack y se realiza el cargo a la tarjeta.
+         *
+         * Para ello, crea el componente receptivo
+         * y registra (añade) los componentes UfosPark
+         * y CrystalDispatcher al receptivo
+         */
+/*
+        Hasta aquí he llegado
+
+        Receptivo receptivo = new Receptivo();
+        receptivo.registra(packExpender);
+        receptivo.registra(ufosPark);
+*/
+
     }
 }
