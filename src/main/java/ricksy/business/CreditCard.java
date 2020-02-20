@@ -2,13 +2,21 @@ package ricksy.business;
 
 public class CreditCard {
     String owner = "";
-    String number = "";
-    double credit =  3000.0d;
+    private String number = "";
+    private double credit =  3000.0d;
     public final String SYMBOL = "EZI";
 
     public CreditCard(String owner, String number) {
         this.owner = owner;
         this.number = number;
+    }
+
+    public String number() {
+        return this.number;
+    }
+
+    public double credit() {
+        return this.credit;
     }
 
     @Override
