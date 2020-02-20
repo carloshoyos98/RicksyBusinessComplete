@@ -22,7 +22,12 @@ public class CrystalExpender {
     }
 
     public void dispatch(CreditCard client) {
-        this.stock--;
-        client.pay(this.itemCost);
+        if(client.credit() >= this.itemCost){
+            this.stock--;
+            client.pay(this.itemCost);
+        } else {
+            //no hace nada
+        }
+
     }
 }

@@ -146,5 +146,12 @@ public class RicksyBusiness {
                 "========================");
         System.out.println("Packs\n" + packExpender);
         System.out.println("Credito de Abradolph: " + abradolph.credit());
+
+        // El pobre GerHead no tiene crédito para comprar su pack
+        System.out.println("\nGearHead sin credito para su pack\n" +
+                "=================================");
+        packExpender.dispatch(gearHead);
+        System.out.println("Packs\n" + packExpender);
+        System.out.println("Credito de GearHead: " + gearHead.credit());
     }
 }

@@ -21,4 +21,14 @@ public class CrystalExpenderTest {
         assertEquals(19, packExtender.stock());
         assertEquals(2950, Abradolph.credit(), 0);
     }
+
+    @Test
+    public void dispatchNoCreditTest() {
+        packExtender = new CrystalExpender(20, 50.0);
+        CreditCard GearHead = new CreditCard("GearHead", "5128453022690520");
+        GearHead.pay(3000.0);
+
+        packExtender.dispatch(GearHead);
+        assertEquals(20, packExtender.stock());
+    }
 }
