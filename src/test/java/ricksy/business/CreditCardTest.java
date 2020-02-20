@@ -18,4 +18,11 @@ public class CreditCardTest {
                      "credit: " + tarjetaRick.credit + tarjetaRick.SYMBOL, tarjetaRick.toString());
 
     }
+
+    @Test
+    public void payTest() {
+     tarjetaRick = new CreditCard("Rick", "5238353317461180");
+     tarjetaRick.pay(2500);
+     assertEquals(500, tarjetaRick.credit, 0d);
+    }
 }
