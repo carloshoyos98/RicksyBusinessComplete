@@ -91,5 +91,60 @@ public class RicksyBusiness {
         CreditCard gearHead = new CreditCard("Gearhead", "8888888888888888");
 
         gearHead.pay(3000); // le vacían la cartera
+
+        //Parte que todavía no consigo sacar del método dispatch
+        /*
+        ufosPark.dispatch(gearHead);
+        System.out.println("Su credito es cero: " + gearHead.credit());
+        System.out.println("No puede reservar ovni: " + ufosPark.getUfoOf(gearHead.number()));
+
+        // Squanchy deja su ovni reservado
+        // antes de irse a squanchear
+
+        System.out.println("\nLLega Squanchy!\n" +
+                "==============");
+        CreditCard squanchy = new CreditCard("Squanchy", "4444444444444444");
+        ufosPark.dispatch(squanchy);
+        System.out.println("Su credito es: " + squanchy.credit());
+        System.out.println("Su ovni es: " + ufosPark.getUfoOf(squanchy.number()));
+
+        // Morty quiere un ovni para huir de la fiesta
+        // pero ya no queda ninguno disponible
+
+        System.out.println("\nAlgun ovni para Morty?\n" +
+                "======================");
+        CreditCard morty = new CreditCard("Morty", "0000000000000000");
+        ufosPark.dispatch(morty);
+        System.out.println("Su credito no ha cambiado: " + morty.credit());
+        System.out.println("No hay ovni Morty: " + ufosPark.getUfoOf(morty.number()));
+
+        // Metemos un ovni más en la flota de ovnis
+        // y mostramos la flota por consola
+
+        System.out.println("\nFlota de ovnis\n" +
+                "==============");
+        ufosPark.add("trex");
+        System.out.println(ufosPark);*/
+
+        /**
+         * Construye el dispensador de packs de bienvenida.
+         * Indica el numero de unidades y el coste de cada
+         * uno de ellos, que es de 50 EZIs
+         */
+
+        CrystalExpender packExpender = new CrystalExpender(3, 50);
+
+        // Muestra el total de packs y su precio unidad
+        System.out.println("\nPacks\n" +
+                "=====");
+        System.out.println(packExpender);
+
+        // Abradolph compra su pack de bienvenida
+        packExpender.dispatch(abradolph);
+
+        System.out.println("\nAbradolph compra su pack\n" +
+                "========================");
+        System.out.println("Packs\n" + packExpender);
+        System.out.println("Credito de Abradolph: " + abradolph.credit());
     }
 }
