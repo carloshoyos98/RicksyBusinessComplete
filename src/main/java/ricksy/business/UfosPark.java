@@ -6,12 +6,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class UfosPark {
-    public List<String> flota = new ArrayList<String>();
-    public Map<String, String> fee = new HashMap<String, String>();
+    public double fee = 500d;
+    public Map<String, String> flota = new HashMap<String, String>();
 
     public UfosPark() {}
 
     public void add(String ufo) {
-        flota.add(ufo);
+        flota.putIfAbsent(ufo, null);
     }
 }
