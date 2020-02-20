@@ -59,5 +59,37 @@ public class RicksyBusiness {
         for (String ovni : ufosID) {
             ufosPark.add(ovni);
         }
+
+        // Procesamos el pago y reserva de ovni de Abradolph
+        //ufosPark.dispatch(abradolph);
+
+        // Mostramos el ID del ovni asignado a Abradolph
+        System.out.println("\nOvni de Abradolph\n" +
+                "=================");
+        //System.out.println(ufosPark.getUfoOf(abradolph.number()));
+
+        // Mostramos el credito de la tarjeta de Abradolph
+        //System.out.println("Credito de Abradolph: " + abradolph.credit());
+
+        // Abradolph quiere reservar otro ovni.
+        // El sistema detecta que ya tiene uno
+        // e ignora la petición.
+
+        System.out.println("\nAbradolph quiere otro ovni\n" +
+                "==========================");
+        //ufosPark.dispatch(abradolph);
+        //System.out.println("Su credito no ha cambiado: " + abradolph.credit());
+        //System.out.println("Ovni de Abradolph: " + ufosPark.getUfoOf(abradolph.number()));
+
+        // A GearHead le vacía la tarjeta el alien "Cámara Lenta"
+        // mientras le daba la chapa, justo antes de pagar el ovni.
+        // Intenta reservarlo y el componente de reserva de ovnis
+        // no le asigna ninguno.
+
+        System.out.println("\nLLega GearHead!\n" +
+                "===============");
+        CreditCard gearHead = new CreditCard("Gearhead", "8888888888888888");
+
+        gearHead.pay(3000); // le vacían la cartera
     }
 }
