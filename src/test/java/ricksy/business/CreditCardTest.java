@@ -13,6 +13,9 @@ public class CreditCardTest {
         assertEquals("Rick", tarjetaRick.owner);
         assertEquals("5238353317461180", tarjetaRick.number);
         assertEquals(3000.0, tarjetaRick.credit, 0d);
+        assertEquals("owner: " + tarjetaRick.owner + '\n' +
+                     "number: " + tarjetaRick.number + '\n' +
+                     "credit: " + tarjetaRick.credit + tarjetaRick.SYMBOL, tarjetaRick.toString());
 
     }
 }
