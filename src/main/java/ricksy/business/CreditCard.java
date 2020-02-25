@@ -29,10 +29,10 @@ public class CreditCard {
     }
 
     public boolean pay(double money) {
-        try {
+        if(credit() >= money) {
             this.credit -= money;
             return true;
-        } catch (Exception fail) {
+        } else {
             return false;
         }
 
