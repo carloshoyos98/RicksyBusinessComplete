@@ -29,17 +29,14 @@ public class UfosPark {
     }
 
     //Método que coge el primer ovni libre
-    private void reserveUfo(String ufo, String owner) {
-        this.flota.replace(ufo, owner);
+    private void reserveUfo(String ufo, CreditCard card) {
+        this.flota.replace(ufo, card.number());
 
     }
 
-    public void dispatch(CreditCard tarjeta) {
-        if(freeUfos() != null & tarjeta.pay(this.fee)) {
-
-
-        } else {
-
+    public void dispatch(CreditCard creditCard) {
+        if(freeUfos() != null & creditCard.pay(this.fee)) {
+            reserveUfo(freeUfo, creditCard);
         }
     }
 }

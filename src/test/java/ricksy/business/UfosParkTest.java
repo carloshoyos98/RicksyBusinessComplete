@@ -17,7 +17,7 @@ public class UfosParkTest {
     assert(ufos.flota.size()== 3);
     }
 
-   /* @Test
+    @Test
     public void dispatchTest() {
         ufos = new UfosPark();
         for (String ovni : ovnis) {
@@ -25,6 +25,6 @@ public class UfosParkTest {
         }
         tarjetaRick = new CreditCard("Rick", "5238353317461180");
         ufos.dispatch(tarjetaRick);
-        assertEquals("5238353317461180", ufos.flota.get(0));
-    }*/
+        assertEquals("5238353317461180", ufos.flota.get(ovnis[0]));
+    }
 }
