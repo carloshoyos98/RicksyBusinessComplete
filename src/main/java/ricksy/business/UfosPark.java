@@ -8,7 +8,7 @@ import java.util.Map;
 public class UfosPark {
     public double fee = 500d;
     public Map<String, String> flota = new HashMap<String, String>();
-    private int freeUfo = 0;
+    private String freeUfo = null;
 
 
     public UfosPark() {}
@@ -18,25 +18,28 @@ public class UfosPark {
     }
 
     //Método que comprueba si hay ovnis libres
-    /*private int freeUfos() {
-        for(String cardNumber : this.flota.keySet()) {
-            if(this.flota.get(cardNumber) == null) {
-                freeUfo++;
+    private String freeUfos() {
+        for (Map.Entry<String, String> ufos : this.flota.entrySet()) {
+            if (ufos.getValue() == null) {
+                freeUfo = ufos.getKey();
             }
         }
         return freeUfo;
-    }*/
+
+    }
 
     //Método que coge el primer ovni libre
-    //private void firstFreeUfo() {
+    private void reserveUfo(String ufo, String owner) {
+        this.flota.replace(ufo, owner);
 
-    //}
+    }
 
-    /*public void dispatch(CreditCard tarjeta) {
-        int freeUfos = freeUfos();
-        if(freeUfos <= 0) {
-            this.flota.replace(, tarjeta.number);
+    public void dispatch(CreditCard tarjeta) {
+        if(freeUfos() != null & tarjeta.pay(this.fee)) {
+
+
+        } else {
 
         }
-    }*/
+    }
 }
