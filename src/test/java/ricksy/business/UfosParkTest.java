@@ -29,4 +29,18 @@ public class UfosParkTest {
         ufos.dispatch(tarjetaRick);
         assertEquals("5238353317461180", ufos.flota.get(ovnis[0]));
     }
+
+    /**
+     * Testea que no se pueda reservar un ovni
+     * si no hay crédito suficiente en la tarjeta.
+     * El crédito de la tarjeta no varía.
+     */
+    @Test
+    public void dispatchNoCreditTest() {
+        tarjetaRick.pay(2350);
+        //Ahora que Rick tiene 150, no debería reservarse ovni para él
+        ufos.dispatch(tarjetaRick);
+        assertEquals(150, tarjetaRick.credit(), 0d);
+    }
+
 }
