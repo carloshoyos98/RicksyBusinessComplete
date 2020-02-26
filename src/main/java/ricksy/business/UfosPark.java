@@ -48,4 +48,13 @@ public class UfosPark {
             freeUfo = null;
         }
     }
+    public String getUfoOf(String tarjeta) {
+        String ufo = null;
+        for (Map.Entry<String, String> ufos : this.flota.entrySet()) {
+            if (ufos.getValue() == tarjeta) {
+                ufo = ufos.getKey();
+            }
+        }
+        return ufo;
+    }
 }

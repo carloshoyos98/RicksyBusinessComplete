@@ -79,4 +79,17 @@ public class UfosParkTest {
         System.out.println(ufos.flota);
 
     }
+
+    /**
+     * Devuelve el UFO reservado para la tarjeta.
+     */
+    @Test
+    public void getUfoOfTest() {
+        CreditCard tarjetaMorty = new CreditCard("Rick", "5243342353317461180");
+        ufos.dispatch(tarjetaMorty);
+        ufos.dispatch(tarjetaRick);
+        System.out.println(ufos.flota);
+        assertEquals("unx", ufos.getUfoOf(tarjetaMorty.number()));
+        assertEquals("dox", ufos.getUfoOf(tarjetaRick.number()));
+    }
 }
