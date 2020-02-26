@@ -43,4 +43,18 @@ public class UfosParkTest {
         assertEquals(150, tarjetaRick.credit(), 0d);
     }
 
+    /**
+     * Testea que no se pueda reservar un ovni
+     * si ya existe un ovni reservado para esa tarjeta.
+     * El crédito de la tarjeta no varía.
+     */
+    @Test
+    public void dispatchUfoAlreadyReservedTest() {
+        ufos.dispatch(tarjetaRick);
+        //Ahora si Rick vuelve a pedir un ufo no se le debe dar aunque tenga dinero suficiente
+        ufos.dispatch(tarjetaRick);
+        assertNotNull(ufos.flota.get(ovnis[0]));
+        assertNull(ufos.flota.get(ovnis[1]));
+        assertNull(ufos.flota.get(ovnis[2]));
+    }
 }
