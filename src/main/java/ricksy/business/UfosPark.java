@@ -44,6 +44,8 @@ public class UfosPark {
     public void dispatch(CreditCard creditCard) {
         if(freeUfos() != null) {
             reserveUfo(freeUfo, creditCard);
+            //freeUfo a null para repetir el proceso
+            freeUfo = null;
         }
     }
 }
