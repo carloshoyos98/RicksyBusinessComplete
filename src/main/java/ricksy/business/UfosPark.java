@@ -32,7 +32,9 @@ public class UfosPark {
     private void reserveUfo(String ufo, CreditCard card) {
         if (this.flota.containsValue(card.number())) {
             //No hace nada
+
         } else {
+            card.pay(this.fee);
             this.flota.replace(ufo, card.number());
         }
 
@@ -40,7 +42,7 @@ public class UfosPark {
     }
 
     public void dispatch(CreditCard creditCard) {
-        if(freeUfos() != null & creditCard.pay(this.fee)) {
+        if(freeUfos() != null) {
             reserveUfo(freeUfo, creditCard);
         }
     }

@@ -56,5 +56,6 @@ public class UfosParkTest {
         assertNotNull(ufos.flota.get(ovnis[0]));
         assertNull(ufos.flota.get(ovnis[1]));
         assertNull(ufos.flota.get(ovnis[2]));
+        assertEquals(2500, tarjetaRick.credit(), 0d);
     }
 }
