@@ -24,5 +24,8 @@ public class CreditCardTest {
      tarjetaRick = new CreditCard("Rick", "5238353317461180");
      tarjetaRick.pay(2500);
      assertEquals(500, tarjetaRick.credit(), 0d);
+        //Testea que no haga pago si no hay dinero suficiente
+     tarjetaRick.pay(650);
+     assertEquals(500,tarjetaRick.credit(),0d);
     }
 }
