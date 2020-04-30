@@ -66,10 +66,10 @@ public class RicksyBusiness {
         // Mostramos el ID del ovni asignado a Abradolph
         System.out.println("\nOvni de Abradolph\n" +
                 "=================");
-        //System.out.println(ufosPark.getUfoOf(abradolph.number()));
+        System.out.println(ufosPark.getUfoOf(abradolph.number()));
 
         // Mostramos el credito de la tarjeta de Abradolph
-        //System.out.println("Credito de Abradolph: " + abradolph.credit());
+        System.out.println("Credito de Abradolph: " + abradolph.credit());
 
         // Abradolph quiere reservar otro ovni.
         // El sistema detecta que ya tiene uno
@@ -77,9 +77,9 @@ public class RicksyBusiness {
 
         System.out.println("\nAbradolph quiere otro ovni\n" +
                 "==========================");
-        //ufosPark.dispatch(abradolph);
-        //System.out.println("Su credito no ha cambiado: " + abradolph.credit());
-        //System.out.println("Ovni de Abradolph: " + ufosPark.getUfoOf(abradolph.number()));
+        ufosPark.dispatch(abradolph);
+        System.out.println("Su credito no ha cambiado: " + abradolph.credit());
+        System.out.println("Ovni de Abradolph: " + ufosPark.getUfoOf(abradolph.number()));
 
         // A GearHead le vacía la tarjeta el alien "Cámara Lenta"
         // mientras le daba la chapa, justo antes de pagar el ovni.
@@ -92,8 +92,7 @@ public class RicksyBusiness {
 
         gearHead.pay(3000); // le vacían la cartera
 
-        //Parte que todavía no consigo sacar del método dispatch
-        /*
+
         ufosPark.dispatch(gearHead);
         System.out.println("Su credito es cero: " + gearHead.credit());
         System.out.println("No puede reservar ovni: " + ufosPark.getUfoOf(gearHead.number()));
@@ -124,7 +123,7 @@ public class RicksyBusiness {
         System.out.println("\nFlota de ovnis\n" +
                 "==============");
         ufosPark.add("trex");
-        System.out.println(ufosPark);*/
+        System.out.println(ufosPark);
 
         /**
          * Construye el dispensador de packs de bienvenida.
@@ -163,13 +162,13 @@ public class RicksyBusiness {
          * y registra (añade) los componentes UfosPark
          * y CrystalDispatcher al receptivo
          */
-/*
-        Hasta aquí he llegado
+
+
 
         Receptivo receptivo = new Receptivo();
         receptivo.registra(packExpender);
         receptivo.registra(ufosPark);
-*/
+
 
     }
 }
